@@ -1,8 +1,8 @@
 pass=getSessionID();
-appID="692002588903233";
+appID="23591652";
 redirectURI="https://kaustubh9702.github.io./Login-Twitter/redirect.html";
 function windowOpen(){
-    OGURL="https://api.twitter.com/oauth/request_token"+appID+"&redirect_uri="+redirectURI+"&state="+pass;
+    OGURL="https://www.twitter.com/oauth/v2/authorization="+appID+"&redirect_uri="+redirectURI+"&state="+pass;
     window.open(OGURL, "Log Into Facebook","width=500, height=500, left=200, top=50");
 }
 
@@ -18,8 +18,7 @@ function getUserID(acc_token){
             USERObj=JSON.parse(userID.responseText);
             UserID=USERObj.id;
             sessionStorage.setItem("UserID",UserID);
-            console.log("User ID:"+sessionStorage.getItem("UserID"));
-           
+            console.log("User ID:"+sessionStorage.getItem("UserID"));    
         }
         else if(userID.status===404){
             console.log("No Records Found");
@@ -45,8 +44,7 @@ function getAccessToken(){
             sessionStorage.setItem("access_token",AccessToken);
             console.log("Access Token:"+sessionStorage.getItem("access_token"));
             getUserID(sessionStorage.getItem("access_token"));
-            console.log("User ID: "+sessionStorage.getItem("UserID"));
-            
+            console.log("User ID: "+sessionStorage.getItem("UserID")); 
         }
         else if(token.status===404){
             console.log("No Records Found");
@@ -87,7 +85,7 @@ function clickCounter(){
     }
 }
 function getSessionID(){
-    var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var chars = "VTBLRXpCS05Jallib0ZwV2VSNVM6MTpjaQ";
  var passwordLength = 12;
  var password = "";
 
